@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-gray-200 text-gray-900 antialiased;
+}
