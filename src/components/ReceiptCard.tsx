@@ -27,12 +27,11 @@ function ReceiptCard({
   onDownloadPdf,
   copyMessage,
 }: ReceiptCardProps) {
-  // Sum UTXO inputs/outputs to derive sent/received amounts.
+  // Sum UTXO inputs to derive sent amount.
   const totalInput = tx.vin.reduce(
     (sum, vin) => sum + (vin.prevout?.value ?? 0),
     0
   );
-  const totalOutput = tx.vout.reduce((sum, vout) => sum + vout.value, 0);
 
   const sent = totalInput;
   const feePercent = totalInput ? (tx.fee / totalInput) * 100 : 0;
