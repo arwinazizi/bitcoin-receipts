@@ -35,7 +35,6 @@ function ReceiptCard({
   const totalOutput = tx.vout.reduce((sum, vout) => sum + vout.value, 0);
 
   const sent = totalInput;
-  const received = totalOutput - tx.fee;
   const feePercent = totalInput ? (tx.fee / totalInput) * 100 : 0;
 
   const hasTime = tx.status.confirmed && tx.status.block_time != null;
