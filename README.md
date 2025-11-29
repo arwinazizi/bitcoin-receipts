@@ -1,5 +1,7 @@
 # Bitcoin Receipts
 
+https://bitcoin-receipts.vercel.app/ 
+
 A small prototype tool for viewing human-readable receipts for Bitcoin transactions.
 
 The app fetches live transaction data from the [mempool.space](https://mempool.space) API, calculates key values using the Bitcoin UTXO model, and renders a structured receipt that can be copied or downloaded as a PDF.
